@@ -10,7 +10,7 @@
         var feature = d3.select("#event");
     d3.json("/getData/", function(d) {
         console.log(d);
-        feature.text(d.out);
+        feature.text('The time is now: ' + d.out);
     });
     </script>
 </body>
