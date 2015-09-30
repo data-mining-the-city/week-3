@@ -17,7 +17,7 @@ def index():
 def getData():
 	
 	client = pyorient.OrientDB("localhost", 2424)
-	session_id = client.connect("root", "admin")
+	session_id = client.connect("root", "wanying0517")
 	db_name = "soufun"
 	db_username = "admin"
 	db_password = "admin"
