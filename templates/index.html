@@ -19,8 +19,8 @@
 		*/
 		circle {
 			fill-opacity: 0;
-			stroke: red;
-			stroke-width: 5px;
+			
+			stroke-width: 1px;
 		}
 	</style>
 
@@ -85,6 +85,9 @@
 
 			    var buffer = 50;
 
+
+
+
 			    // reposition the SVG to cover the features.
 			    svg .attr("width", bottomRight[0] - topLeft[0] + (buffer * 2))
 			        .attr("height", bottomRight[1] - topLeft[1] + (buffer * 2))
@@ -99,6 +102,13 @@
 			    	// hint: the price of each data point can be accessed in d.properites.price
 			    	// you can use an anonymous function to access this data for every point, just like we have done for the geographic coordinates
 			    	// for an extra challenge, see if you can change the color of the circles to correspond to some data as well!
+			    	.attr("r", function(d) { return d.properties.price * 0.001; })
+
+			    	.attr("stroke", function(d){
+			    		if (d.properties.price > 10000) { return "red"; }
+			    		else {return "green"; }
+			    	})
+
 			    	.attr("cx", function(d) { return projectPoint(d.geometry.coordinates[0], d.geometry.coordinates[1]).x; })
 			    	.attr("cy", function(d) { return projectPoint(d.geometry.coordinates[0], d.geometry.coordinates[1]).y; });
 			};
