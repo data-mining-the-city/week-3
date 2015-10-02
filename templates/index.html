@@ -19,7 +19,6 @@
 		*/
 		circle {
 			fill-opacity: 0;
-			stroke: blue;
 			stroke-width: 3px;
 		}
 	</style>
@@ -104,9 +103,9 @@
 			    	.attr("r",function(d) {return d.properites.price/500;})
 			    	.attr("stroke",function(d){
 			    		if(d.properites.price > 50000){
-			    			return red;
+			    			return "red";
 			    		}
-			    		else {return green;
+			    		else {return "green";
 			    		}
 
 			    	}")
