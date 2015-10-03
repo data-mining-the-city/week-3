@@ -17,7 +17,7 @@ def index():
 def getData():
 	
 	client = pyorient.OrientDB("localhost", 2424)
-	session_id = client.connect("root", "admin")
+	session_id = client.connect("root", "D92C5E80A666182899D042B007099F47F12A48CCB2352D7BD3329AD10E06370C")
 	db_name = "soufun"
 	db_username = "admin"
 	db_password = "admin"
@@ -52,6 +52,7 @@ def getData():
 		feature["properties"]["name"] = record.title
 		feature["properties"]["price"] = record.price
 		feature["geometry"]["coordinates"] = [record.latitude, record.longitude]
+		feature["properties"]["time"] = record.time
 
 		output["features"].append(feature)
 
