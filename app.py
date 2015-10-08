@@ -20,7 +20,7 @@ def getData():
 	session_id = client.connect("root", "admin")
 	db_name = "soufun"
 	db_username = "admin"
-	db_password = "admin"
+	db_password = "Freedom@42365"
 
 	if client.db_exists( db_name, pyorient.STORAGE_TYPE_MEMORY ):
 		client.db_open( db_name, db_username, db_password )
