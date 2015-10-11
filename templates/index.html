@@ -18,9 +18,9 @@
 		[Implement your own style rules here to change the way the circles are displayed]
 		*/
 		circle {
-			fill-opacity: 0;
-			stroke: red;
-			stroke-width: 5px;
+			fill-opacity: 50;
+			stroke: blue;
+			stroke-width: 8px;
 		}
 	</style>
 
@@ -33,7 +33,7 @@
 
 	<script type="text/javascript">
 
-		var map = L.map('map').setView([22.539029, 114.062076], 16);
+		var map = L.map('map').setView([22.532498, 114.0644329], 16);
 
 		//this is the OpenStreetMap tile implementation
 
@@ -43,11 +43,11 @@
 
 		//uncomment for Mapbox implementation, and supply your own access token
 
-		// L.tileLayer('https://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={accessToken}', {
-		// 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-		// 	mapid: 'mapbox.light',
-		// 	accessToken: [INSERT YOUR TOKEN HERE!]
-		// }).addTo(map);
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={accessToken}', {
+		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		mapid: 'mapbox.light',
+		accessToken: ['pk.eyJ1IjoiYW5qYWxpc2luZ2h2aSIsImEiOiJjaWZtenJkeTlmemdvc3lseGY4djcyY3dtIn0.INaJybt0xzYSLmsMaOl6KQ']
+		}).addTo(map);
 
 		//create variables to store a reference to svg and g elements
 

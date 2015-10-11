@@ -3,7 +3,7 @@ from flask import render_template
 
 import json
 import time
-import sys
+import sys 
 
 import pyorient
 
@@ -17,7 +17,7 @@ def index():
 def getData():
 	
 	client = pyorient.OrientDB("localhost", 2424)
-	session_id = client.connect("root", "admin")
+	session_id = client.connect("root", "68B3F006702316AE57B3C7D440E95782BF2EB8F24D9F540E388294A20D69AE65")
 	db_name = "soufun"
 	db_username = "admin"
 	db_password = "admin"
