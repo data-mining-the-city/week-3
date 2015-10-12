@@ -39,7 +39,6 @@ def getData():
         records = client.command(query.format(lat1, lat2, lng1, lng2))
 
         numListings = len(records)
-
         print 'received ' + str(numListings) + ' records'
 
         client.db_close()
