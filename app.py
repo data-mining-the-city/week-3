@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask
 from flask import render_template
 
@@ -17,7 +18,7 @@ def index():
 def getData():
 	
 	client = pyorient.OrientDB("localhost", 2424)
-	session_id = client.connect("root", "admin")
+	session_id = client.connect("root", "48B629DB7396C3550DCFFEB77E0472CCE71181EC00CE34322A8A8B9631632594")
 	db_name = "soufun"
 	db_username = "admin"
 	db_password = "admin"
