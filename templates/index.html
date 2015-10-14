@@ -59,12 +59,12 @@
         circles.enter()
             .append("circle")
         .attr("r", 10);
-    });
+    
     
     function update() {
         var bounds = path.bounds(data),
-            topLeft = bounds[0],
-            bottomRight = bounds[1];
+        topLeft = bounds[0],
+        bottomRight = bounds[1];
 
         var buffer = 50;
 
@@ -82,7 +82,7 @@
     
     update();
     map.on("viewreset", update);
-        
+     });   
     </script>
 </body>
 </html>
