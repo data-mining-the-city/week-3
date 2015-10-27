@@ -7,6 +7,8 @@ import sys
 
 import pyorient
 
+output = {"type":"FeatureCollection","features":[]}
+
 app = Flask(__name__)
 
 @app.route("/")
